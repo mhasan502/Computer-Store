@@ -7,11 +7,12 @@
 .form {
     position: relative;
     z-index: 1;
-    background: #4bb883;
-    max-width: 360px;
-    margin: 0 auto 100px;
+    background: #48c774;
+    max-width: 400px;
+    margin: 50px auto 100px;
     padding: 45px;
     text-align: center;
+    border-radius: 15px;
     box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
 }
 
@@ -21,8 +22,9 @@
     background: #f2f2f2;
     width: 100%;
     border: 0;
-    margin: 0 0 15px;
-    padding: 15px;
+    border-radius: 8px;
+    margin: 10px 0 15px;
+    padding: 20px;
     box-sizing: border-box;
     font-size: 14px;
 }
@@ -31,9 +33,10 @@
     font-family: sans-serif;
     text-transform: uppercase;
     outline: 0;
-    background: #4bb883;
+    background: #3273dc;
     width: 100%;
     border: 0;
+    border-radius: 8px;
     padding: 15px;
     color: #FFFFFF;
     font-size: 14px;
@@ -46,9 +49,11 @@
 }
 
 .form .message {
-    margin: 15px 0 0;
-    color: #b3b3b3;
-    font-size: 12px;
+    margin: 20px 0 0;
+    color: #338460;
+    font-size: 13px;
+    background-color: #FFFFFF;
+    border-radius: 6px;
 }
 
 .form .message a {
