@@ -51,7 +51,7 @@
             </div>
         </div>
         <div class="footer-copyright">
-            <p>© 2016 Copyright Text </p>
+            <p>© MD. Mehedi Hasan </p>
         </div>
     </footer>
 </html>
