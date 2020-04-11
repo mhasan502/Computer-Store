@@ -29,5 +29,3 @@ if (isset($_POST['fname']) && isset($_POST['lname']) && isset($_POST['username']
 } else {
     echo "404 not found";
 }
-
-?>

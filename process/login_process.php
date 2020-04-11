@@ -22,5 +22,3 @@ if (isset($_POST['username']) && isset($_POST['password'])) {
 } else {
     echo "Please insert Username and Password";
 }
-
-?>

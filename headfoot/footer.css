@@ -15,11 +15,6 @@
     margin-bottom: 60px;
 }
 
-#myFooter .navbar-brand {
-    margin-top: 45px;
-    height: 65px;
-}
-
 #myFooter .footer-copyright p {
     margin: 10px;
     color: #ccc;
@@ -87,7 +82,7 @@
 #myFooter .btn {
     color: white;
     background-color: #d84b6b;
-    border-radius: 20px;
+    border-radius: 12px;
     border: none;
     width: 150px;
     display: block;
@@ -99,12 +94,6 @@
     #myFooter {
         text-align: center;
     }
-}
-
-.content {
-    flex: 1 0 auto;
-    -webkit-flex: 1 0 auto;
-    min-height: 200px;
 }
 
 #myFooter {
