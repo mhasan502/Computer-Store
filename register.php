@@ -1,7 +1,7 @@
 <html>
 
 <head>
-    <link rel="stylesheet" type="text/css" href="logreg.css">
+    <link rel="stylesheet" type="text/css" href="css/logreg.css">
 </head>
 
 <body>

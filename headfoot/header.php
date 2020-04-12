@@ -19,7 +19,7 @@ session_start();
         </a>
     </div>
 
-    <div id="navbarBasicExample" class="navbar-menu">
+    <div id="head" class="navbar-menu">
         <div class="navbar-brand">
             <div class="navbar-item has-dropdown is-hoverable">
                 <a class="navbar-link">
@@ -73,10 +73,10 @@ session_start();
                 </div>
             </div>
             <div class="navbar-item is-hoverable">
-                <a class="navbar-item">
+                <a class="navbar-item" href="about us.php">
                     About Us
                 </a>
-                <a class="navbar-item">
+                <a class="navbar-item" href="contact us.php">
                     Contact US
                 </a>
             </div>

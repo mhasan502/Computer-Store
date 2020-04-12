@@ -39,13 +39,12 @@
     cursor: not-allowed
 }
 
-/*! minireset.css v0.0.6 | MIT License | github.com/jgthms/minireset.css */
 body, hr, html {
     margin: 0;
     padding: 0
 }
 
-button {
+#head button {
     margin: 0
 }
 
@@ -57,7 +56,7 @@ html {
     box-sizing: inherit
 }
 
-img {
+#head img {
     height: auto;
     max-width: 100%
 }
@@ -77,7 +76,7 @@ html {
     text-size-adjust: 100%
 }
 
-header {
+#head header {
     display: block
 }
 
@@ -102,11 +101,11 @@ a strong {
     color: currentColor
 }
 
-a:hover {
+#head a:hover {
     color: #363636
 }
 
-hr {
+#head hr {
     background-color: #f5f5f5;
     border: none;
     display: block;
@@ -114,7 +113,7 @@ hr {
     margin: 1.5rem 0
 }
 
-img {
+#head img {
     height: auto;
     max-width: 100%
 }
@@ -336,11 +335,6 @@ strong {
     }
 }
 
-.title strong {
-    color: inherit;
-    font-weight: inherit
-}
-
 .navbar {
     background-color: #fff;
     min-height: 3.25rem;
@@ -481,7 +475,7 @@ strong {
     color: #4a4a4a;
     display: block;
     line-height: 1.5;
-    padding: .5rem .75rem;
+    padding: 0.2rem 1rem 0.2rem 0.75rem;
     position: relative
 }
 
