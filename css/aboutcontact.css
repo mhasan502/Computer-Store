@@ -166,44 +166,44 @@ img {
     vertical-align: middle
 }
 
-.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
+h1, h2, h3, h4, h5, h6 {
     font-family: inherit;
     font-weight: 500;
     line-height: 1.1;
     color: inherit
 }
 
-.h1, .h2, .h3, h1, h2, h3 {
+h1, h2, h3 {
     margin-top: 20px;
     margin-bottom: 10px
 }
 
-.h4, .h5, .h6, h4, h5, h6 {
+h4, h5, h6 {
     margin-top: 10px;
     margin-bottom: 10px
 }
 
-.h1, h1 {
+h1 {
     font-size: 36px
 }
 
-.h2, h2 {
+h2 {
     font-size: 30px
 }
 
-.h3, h3 {
+h3 {
     font-size: 24px
 }
 
-.h4, h4 {
+h4 {
     font-size: 18px
 }
 
-.h5, h5 {
+h5 {
     font-size: 14px
 }
 
-.h6, h6 {
+h6 {
     font-size: 12px
 }
 
@@ -254,7 +254,7 @@ ul ul {
     margin-left: -15px
 }
 
-.col-lg-1, .col-lg-10, .col-lg-11, .col-lg-12, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-md-1, .col-md-10, .col-md-11, .col-md-12, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9 {
+.col-md-6, .col-md-8 {
     position: relative;
     min-height: 1px;
     padding-right: 15px;
@@ -262,214 +262,17 @@ ul ul {
 }
 
 @media (min-width: 992px) {
-    .col-md-1, .col-md-10, .col-md-11, .col-md-12, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9 {
+    .col-md-6, .col-md-8 {
         float: left
     }
-
-    .col-md-12 {
-        width: 100%
-    }
-
-    .col-md-11 {
-        width: 91.66666666666666%
-    }
-
-    .col-md-10 {
-        width: 83.33333333333334%
-    }
-
-    .col-md-9 {
-        width: 75%
-    }
-
     .col-md-8 {
         width: 66.66666666666666%
     }
-
-    .col-md-7 {
-        width: 58.333333333333336%
-    }
-
     .col-md-6 {
         width: 50%
     }
-
-    .col-md-5 {
-        width: 41.66666666666667%
-    }
-
-    .col-md-4 {
-        width: 33.33333333333333%
-    }
-
-    .col-md-3 {
-        width: 25%
-    }
-
-    .col-md-2 {
-        width: 16.666666666666664%
-    }
-
-    .col-md-1 {
-        width: 8.333333333333332%
-    }
-
-    .col-md-offset-12 {
-        margin-left: 100%
-    }
-
-    .col-md-offset-11 {
-        margin-left: 91.66666666666666%
-    }
-
-    .col-md-offset-10 {
-        margin-left: 83.33333333333334%
-    }
-
-    .col-md-offset-9 {
-        margin-left: 75%
-    }
-
-    .col-md-offset-8 {
-        margin-left: 66.66666666666666%
-    }
-
-    .col-md-offset-7 {
-        margin-left: 58.333333333333336%
-    }
-
-    .col-md-offset-6 {
-        margin-left: 50%
-    }
-
-    .col-md-offset-5 {
-        margin-left: 41.66666666666667%
-    }
-
-    .col-md-offset-4 {
-        margin-left: 33.33333333333333%
-    }
-
-    .col-md-offset-3 {
-        margin-left: 25%
-    }
-
     .col-md-offset-2 {
         margin-left: 16.666666666666664%
-    }
-
-    .col-md-offset-1 {
-        margin-left: 8.333333333333332%
-    }
-
-    .col-md-offset-0 {
-        margin-left: 0
-    }
-}
-
-@media (min-width: 1200px) {
-    .col-lg-1, .col-lg-10, .col-lg-11, .col-lg-12, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9 {
-        float: left
-    }
-
-    .col-lg-12 {
-        width: 100%
-    }
-
-    .col-lg-11 {
-        width: 91.66666666666666%
-    }
-
-    .col-lg-10 {
-        width: 83.33333333333334%
-    }
-
-    .col-lg-9 {
-        width: 75%
-    }
-
-    .col-lg-8 {
-        width: 66.66666666666666%
-    }
-
-    .col-lg-7 {
-        width: 58.333333333333336%
-    }
-
-    .col-lg-6 {
-        width: 50%
-    }
-
-    .col-lg-5 {
-        width: 41.66666666666667%
-    }
-
-    .col-lg-4 {
-        width: 33.33333333333333%
-    }
-
-    .col-lg-3 {
-        width: 25%
-    }
-
-    .col-lg-2 {
-        width: 16.666666666666664%
-    }
-
-    .col-lg-1 {
-        width: 8.333333333333332%
-    }
-
-    .col-lg-offset-12 {
-        margin-left: 100%
-    }
-
-    .col-lg-offset-11 {
-        margin-left: 91.66666666666666%
-    }
-
-    .col-lg-offset-10 {
-        margin-left: 83.33333333333334%
-    }
-
-    .col-lg-offset-9 {
-        margin-left: 75%
-    }
-
-    .col-lg-offset-8 {
-        margin-left: 66.66666666666666%
-    }
-
-    .col-lg-offset-7 {
-        margin-left: 58.333333333333336%
-    }
-
-    .col-lg-offset-6 {
-        margin-left: 50%
-    }
-
-    .col-lg-offset-5 {
-        margin-left: 41.66666666666667%
-    }
-
-    .col-lg-offset-4 {
-        margin-left: 33.33333333333333%
-    }
-
-    .col-lg-offset-3 {
-        margin-left: 25%
-    }
-
-    .col-lg-offset-2 {
-        margin-left: 16.666666666666664%
-    }
-
-    .col-lg-offset-1 {
-        margin-left: 8.333333333333332%
-    }
-
-    .col-lg-offset-0 {
-        margin-left: 0
     }
 }
 
@@ -537,18 +340,6 @@ input[type=checkbox][disabled], input[type=radio][disabled] {
     cursor: not-allowed
 }
 
-.input-lg {
-    height: 46px;
-    padding: 10px 16px;
-    font-size: 18px;
-    line-height: 1.33;
-    border-radius: 6px
-}
-
-textarea.input-lg {
-    height: auto
-}
-
 .btn {
     display: inline-block;
     padding: 6px 12px;
@@ -605,44 +396,11 @@ textarea.input-lg {
     border-color: #ccc
 }
 
-.btn-link {
-    font-weight: 400;
-    color: #428bca;
-    cursor: pointer;
-    border-radius: 0
-}
-
-.btn-link, .btn-link:active, .btn-link[disabled] {
-    background-color: transparent;
-    box-shadow: none
-}
-
-.btn-link, .btn-link:active, .btn-link:focus, .btn-link:hover {
-    border-color: transparent
-}
-
-.btn-link:focus, .btn-link:hover {
-    color: #2a6496;
-    text-decoration: underline;
-    background-color: transparent
-}
-
-.btn-link[disabled]:focus, .btn-link[disabled]:hover {
-    color: #999;
-    text-decoration: none
-}
-
 .btn-lg {
     padding: 10px 16px;
     font-size: 18px;
     line-height: 1.33;
     border-radius: 6px
-}
-
-.btn-group {
-    position: relative;
-    display: inline-block;
-    vertical-align: middle
 }
 
 .btn-group > .btn {
@@ -658,7 +416,7 @@ textarea.input-lg {
     outline: 0
 }
 
-.btn-group .btn + .btn, .btn-group .btn + .btn-group, .btn-group .btn-group + .btn, .btn-group .btn-group + .btn-group {
+.btn-group .btn + .btn, .btn-group .btn +, .btn-group .btn-group + .btn, .btn-group .btn-group + {
     margin-left: -1px
 }
 
@@ -669,10 +427,6 @@ textarea.input-lg {
 .btn-group > .btn:last-child:not(:first-child) {
     border-top-left-radius: 0;
     border-bottom-left-radius: 0
-}
-
-.btn-group > .btn-group {
-    float: left
 }
 
 .btn-group > .btn-group:not(:first-child):not(:last-child) > .btn {
@@ -700,18 +454,6 @@ textarea.input-lg {
     display: none
 }
 
-.input-group {
-    position: relative;
-    display: table;
-    border-collapse: separate
-}
-
-.input-group[class*=col-] {
-    float: none;
-    padding-right: 0;
-    padding-left: 0
-}
-
 .input-group .form-control {
     float: left;
     width: 100%;
@@ -730,18 +472,12 @@ textarea.input-group-lg > .form-control, textarea.input-group-lg > .input-group-
     height: auto
 }
 
-.input-group .form-control, .input-group-btn {
+.input-group .form-control{
     display: table-cell
 }
 
-.input-group .form-control:not(:first-child):not(:last-child), .input-group-btn:not(:first-child):not(:last-child) {
+.input-group .form-control:not(:first-child):not(:last-child) {
     border-radius: 0
-}
-
-.input-group-btn {
-    width: 1%;
-    white-space: nowrap;
-    vertical-align: middle
 }
 
 .input-group .form-control:first-child, .input-group-btn:first-child > .btn, .input-group-btn:first-child > .btn-group > .btn, .input-group-btn:last-child > .btn-group:not(:last-child) > .btn {
@@ -752,12 +488,6 @@ textarea.input-group-lg > .form-control, textarea.input-group-lg > .input-group-
 .input-group .form-control:last-child, .input-group-btn:first-child > .btn-group:not(:first-child) > .btn, .input-group-btn:first-child > .btn:not(:first-child), .input-group-btn:last-child > .btn, .input-group-btn:last-child > .btn-group > .btn {
     border-top-left-radius: 0;
     border-bottom-left-radius: 0
-}
-
-.input-group-btn {
-    position: relative;
-    font-size: 0;
-    white-space: nowrap
 }
 
 .input-group-btn > .btn {
@@ -772,11 +502,11 @@ textarea.input-group-lg > .form-control, textarea.input-group-lg > .input-group-
     z-index: 2
 }
 
-.input-group-btn:first-child > .btn, .input-group-btn:first-child > .btn-group {
+.input-group-btn:first-child > .btn {
     margin-right: -1px
 }
 
-.input-group-btn:last-child > .btn, .input-group-btn:last-child > .btn-group {
+.input-group-btn:last-child > .btn {
     margin-left: -1px
 }
 
@@ -911,13 +641,6 @@ embed, iframe {
     line-height: 1.6em;
     color: #3a3a3a;
     font-weight: 300
-}
-
-.grid {
-    max-width: 75em;
-    list-style: none;
-    margin: 40px auto;
-    padding: 0
 }
 
 .grid li {
