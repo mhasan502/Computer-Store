@@ -12,15 +12,6 @@ main, section {
     display: block
 }
 
-video {
-    display: inline-block;
-    vertical-align: baseline
-}
-
-[hidden] {
-    display: none
-}
-
 a {
     background-color: transparent
 }
@@ -325,10 +316,6 @@ img {
     padding: 0
 }
 
-body {
-    background: #757575
-}
-
 img {
     max-width: 100%
 }
@@ -464,7 +451,10 @@ body > .body {
 
 #content {
     min-height: 500px;
-    padding-top: 60px
+    width: auto;
+    padding: 10% 2% 10%;
+    margin: auto;
+    background: #757575
 }
 
 .main_content {
@@ -663,7 +653,7 @@ a:focus {
     position: relative;
     margin-bottom: 30px;
     transition: all ease .2s;
-    border-radius: 12px;
+    border-radius: 5px;
 }
 
 .product-thumb:hover {
@@ -683,8 +673,8 @@ a:focus {
     color: #222;
     display: block;
     margin: 0;
-    padding-top: 5px;
-    padding-bottom: 12px
+    padding-top: 25px;
+    padding-bottom: 20px;
 }
 
 .product-thumb .product-content-blcok .descriptions ul {
@@ -702,24 +692,18 @@ a:focus {
     list-style: disc
 }
 
-.product-thumb .actions .price {
-    padding: 8px 0;
+.product-thumb .actions .space-between {
+    padding: 8px 50%;
     border-top: 2px solid #0089d0;
     border-bottom: 2px solid #0089d0;
-    margin: 0 -20px
+    margin: 0 -20px;
 }
 
 .product-thumb .actions .price span {
     color: #0089d0;
     font-size: 14px;
     font-weight: 700;
-    padding-left: 20px;
     text-transform: uppercase
-}
-
-.product-thumb .actions .price {
-    padding-right: 20px;
-    float: right
 }
 
 .product-thumb .actions .cart-btn {

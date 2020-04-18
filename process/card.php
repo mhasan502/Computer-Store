@@ -16,6 +16,7 @@ require_once 'connect.php';
                     </a>
                 </div>
                 <div class='product-info'>
+                
                     <div class='product-content-blcok'>
                         <h4 class='product-name'>
                             <a href='#'>$pname</a>

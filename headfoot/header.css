@@ -109,7 +109,7 @@ a strong {
     border: none;
     display: block;
     height: 2px;
-    margin: 1.5rem 0
+    margin: .35rem 0
 }
 
 #head img {
@@ -481,6 +481,9 @@ strong {
 .navbar-link, a.navbar-item {
     cursor: pointer
 }
+.navbar-link, a.navbar-item:hover {
+    color: #FFFFFF;
+}
 
 .navbar-link:focus, .navbar-link:focus-within, .navbar-link:hover, a.navbar-item:focus, a.navbar-item:focus-within, a.navbar-item:hover {
     background-color: #fafafa;
@@ -543,7 +546,7 @@ strong {
     }
 
     .navbar {
-        min-height: 3.25rem
+        min-height: 4.5rem
     }
 
     .navbar-item, .navbar-link {
