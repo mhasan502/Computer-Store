@@ -22,7 +22,7 @@ if (isset($_POST['fname']) && isset($_POST['lname']) && isset($_POST['username']
     $is_inserted = mysqli_query($conn, $register_query);
 
     if ($is_inserted) {
-        echo "Inserted successfully";
+        header("Location: ../login.php");
     } else {
         echo "Opps error!";
     }

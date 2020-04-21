@@ -1,7 +1,6 @@
 <?php
 require_once 'connect.php';
-    $query = "SELECT * FROM product";
-    $result = mysqli_query($conn, $query);
+    $result = mysqli_query($conn, $GLOBALS['query']);
     while( $row = mysqli_fetch_array($result)){
         $pname = $row['name'];
         $price = $row['price'];

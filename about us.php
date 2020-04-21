@@ -3,7 +3,7 @@
     <link rel="stylesheet" href="css/aboutcontact.css">
 </head>
 <body>
-<?php require("process/header.php"); ?>
+<?php require_once("process/header.php"); ?>
 <section id="about" class="section">
     <div class="container">
         <div class="row">
@@ -57,6 +57,6 @@
     </div>
 </section>
 
-<?php require("headfoot/footer.php"); ?>
+<?php require_once("process/footer.php"); ?>
 </body>
 </html>

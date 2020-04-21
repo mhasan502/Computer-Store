@@ -11,7 +11,7 @@
 <nav class="navbar is-success" role="navigation" aria-label="main navigation">
     <div class="navbar-brand">
         <a class="navbar-item" href="index.php">
-            <img src="./logo.png" width="220" height="56">
+            <img src="img/logo.png" width="220" height="56">
         </a>
     </div>
 
@@ -24,18 +24,18 @@
                 <div class="navbar-dropdown">
                     <?php
                     require_once 'connect.php';
-
-                    $query = "SELECT * FROM  category ORDER BY category_id";
-                    $result = mysqli_query($conn, $query);
-                    while( $row = mysqli_fetch_array($result)){
+                    $category = "SELECT * FROM  category ORDER BY category_id";
+                    $result = mysqli_query($conn, $category);
+                    while($row = mysqli_fetch_array($result)){
                         $cat = $row['category_name'];
+                        $cid = $row['category_id'];
                         echo "
-                        <a class='navbar-item'>$cat</a>";
+                        <a class='navbar-item' href='index.php?$cat=true'>$cat</a>";
                     }
+                    require "browse.php";
                     ?>
                 </div>
             </div>
-
 
             <div class="navbar-item has-dropdown is-hoverable">
                 <a class="navbar-link">
@@ -44,14 +44,14 @@
                 <div class="navbar-dropdown">
                     <?php
                     require_once 'connect.php';
-
-                    $query = "SELECT DISTINCT company FROM  product ORDER BY company";
-                    $result = mysqli_query($conn, $query);
+                    $brand = "SELECT DISTINCT company FROM  product ORDER BY company";
+                    $result = mysqli_query($conn, $brand);
                     while( $row = mysqli_fetch_array($result)){
                         $brand = $row['company'];
                         echo "
                         <a class='navbar-item'>$brand</a>";
                     }
+
                     ?>
                 </div>
             </div>
@@ -62,6 +62,12 @@
                 <a class="navbar-item" href="contact us.php">
                     Contact US
                 </a>
+                <div id="searchbar" class="field">
+                    <div class="control">
+                        <input id="search" class="input is-info" type="text" placeholder="Search Here">
+<!--                        <button id="search" onclick=""></button>-->
+                    </div>
+                </div>
             </div>
         </div>
 
@@ -79,3 +85,17 @@
         </div>
     </div>
 </nav>
+
+<script>
+    const input = document.getElementById("search");
+    input.addEventListener("keyup", function(event) {
+        event.preventDefault();
+        if (event.keyCode === 13) {
+
+            location.href = "https://google.com";
+        }
+    });
+</script>
+<?php
+
+?>

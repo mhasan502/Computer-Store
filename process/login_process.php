@@ -15,7 +15,7 @@ if (isset($_POST['username']) && isset($_POST['password'])) {
     if ($count == 1) {
         session_regenerate_id();
         $_SESSION['name'] = $username;
-        header("Location: ../");
+        header("Location: ../index.php");
         exit();
     } else {
         echo "Your Username or Password is invalid";
