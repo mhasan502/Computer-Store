@@ -5,7 +5,7 @@ require_once 'connect.php';
 
 if (isset($_POST['username']) && isset($_POST['password'])) {
     $username = $_POST['username'];
-    $password = $_POST['password'];
+    $password = MD5($_POST['password']);
     $login_query = "SELECT concat(fname,' ',lname) as name FROM `user` Where username='$username' AND password='$password'";
 
     $result = mysqli_query($conn, $login_query);

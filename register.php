@@ -5,7 +5,7 @@
 </head>
 
 <body>
-<?php require("headfoot/header.php"); ?>
+<?php require("process/header.php"); ?>
 <div class="logreg">
     <div class="form">
         <form action="./process/register_process.php" method="post">
@@ -23,7 +23,7 @@
         </form>
     </div>
 </div>
-<?php require("headfoot/footer.php"); ?>
+<?php require("process/footer.php"); ?>
 </body>
 
 </html>

@@ -4,12 +4,12 @@
     <title></title>
 </head>
 
-<?php require("headfoot/header.php"); ?>
+<?php require("process/header.php"); ?>
 <body>
     <div id="content" class="col-xs-12 col-md-9 product-listing">
         <?php require("process/card.php"); ?>
     </div>
 </body>
-<?php require("headfoot/footer.php"); ?>
+<?php require("process/footer.php"); ?>
 
 </html>

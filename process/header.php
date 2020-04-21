@@ -1,7 +1,3 @@
-<?php
-session_start();
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -26,50 +22,37 @@ session_start();
                     Categories
                 </a>
                 <div class="navbar-dropdown">
-                    <a class="navbar-item">
-                        Laptop
-                    </a>
-                    <hr class="navbar-divider">
-                    <a class="navbar-item">
-                        Processor
-                    </a>
-                    <a class="navbar-item">
-                        RAM
-                    </a>
-                    <a class="navbar-item">
-                        GPU
-                    </a>
-                    <a class="navbar-item">
-                        Monitor
-                    </a>
-                    <a class="navbar-item">
-                        Storage
-                    </a>
+                    <?php
+                    require_once 'connect.php';
+
+                    $query = "SELECT * FROM  category ORDER BY category_id";
+                    $result = mysqli_query($conn, $query);
+                    while( $row = mysqli_fetch_array($result)){
+                        $cat = $row['category_name'];
+                        echo "
+                        <a class='navbar-item'>$cat</a>";
+                    }
+                    ?>
                 </div>
             </div>
+
+
             <div class="navbar-item has-dropdown is-hoverable">
                 <a class="navbar-link">
                     Brand
                 </a>
                 <div class="navbar-dropdown">
-                    <a class="navbar-item">
-                        Intel
-                    </a>
-                    <a class="navbar-item">
-                        AMD
-                    </a>
-                    <a class="navbar-item">
-                        Asus
-                    </a>
-                    <a class="navbar-item">
-                        Gigabyte
-                    </a>
-                    <a class="navbar-item">
-                        G.Skill
-                    </a>
-                    <a class="navbar-item">
-                        Seagate
-                    </a>
+                    <?php
+                    require_once 'connect.php';
+
+                    $query = "SELECT DISTINCT company FROM  product ORDER BY company";
+                    $result = mysqli_query($conn, $query);
+                    while( $row = mysqli_fetch_array($result)){
+                        $brand = $row['company'];
+                        echo "
+                        <a class='navbar-item'>$brand</a>";
+                    }
+                    ?>
                 </div>
             </div>
             <div class="navbar-item is-hoverable">

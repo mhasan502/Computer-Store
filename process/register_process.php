@@ -9,7 +9,7 @@ if (isset($_POST['fname']) && isset($_POST['lname']) && isset($_POST['username']
     $lname = $_POST['lname'];
     $username = $_POST['username'];
     $email = $_POST['email'];
-    $password = $_POST['password'];
+    $password = MD5($_POST['password']);
     $phone = $_POST['phone'];
     $street = $_POST['street'];
     $city = $_POST['city'];
