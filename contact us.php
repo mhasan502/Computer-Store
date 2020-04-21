@@ -1,10 +1,10 @@
 <html>
 <head>
-    <link rel="stylesheet" href="./css/aboutcontact.css">
+    <link rel="stylesheet" href="css/aboutcontact.css">
 </head>
 
 <body>
-<?php require("headfoot/header.php"); ?>
+<?php require("process/header.php"); ?>
 <section id="contact" class="section">
     <div class="container">
         <div class="row">

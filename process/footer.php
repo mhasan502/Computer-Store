@@ -2,8 +2,8 @@
 <html>
 <head>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
-    <link rel="stylesheet" href="./headfoot/custom.css">
-    <link rel="stylesheet" href="./headfoot/footer.css">
+    <link rel="stylesheet" href="css/custom.css">
+    <link rel="stylesheet" href="css/footer.css">
 </head>
 
 <footer id="myFooter">

@@ -5,12 +5,12 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Computer-Store</title>
-    <link rel="stylesheet" type="text/css" href="headfoot/header.css">
+    <link rel="stylesheet" type="text/css" href="css/header.css">
 </head>
 
 <nav class="navbar is-success" role="navigation" aria-label="main navigation">
     <div class="navbar-brand">
-        <a class="navbar-item" href="">
+        <a class="navbar-item" href="index.php">
             <img src="./logo.png" width="220" height="56">
         </a>
     </div>
