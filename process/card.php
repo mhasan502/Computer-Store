@@ -1,7 +1,7 @@
 <?php
 require_once 'connect.php';
     $result = mysqli_query($conn, $GLOBALS['query']);
-    while( $row = mysqli_fetch_array($result)){
+    while($row = mysqli_fetch_array($result)){
         $pname = $row['name'];
         $price = $row['price'];
         $imagepath = $row['imagepath'];

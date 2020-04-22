@@ -49,9 +49,8 @@
                     while( $row = mysqli_fetch_array($result)){
                         $brand = $row['company'];
                         echo "
-                        <a class='navbar-item'>$brand</a>";
+                        <a class='navbar-item' href='index.php?$brand=true'>$brand</a>";
                     }
-
                     ?>
                 </div>
             </div>
@@ -64,8 +63,9 @@
                 </a>
                 <div id="searchbar" class="field">
                     <div class="control">
-                        <input id="search" class="input is-info" type="text" placeholder="Search Here">
-<!--                        <button id="search" onclick=""></button>-->
+                        <form action="search.php" method="get">
+                            <input id="searchbox" name="searchitem" class="input is-info" type="text" placeholder="Search Here" required>
+                        </form>
                     </div>
                 </div>
             </div>
@@ -85,17 +85,3 @@
         </div>
     </div>
 </nav>
-
-<script>
-    const input = document.getElementById("search");
-    input.addEventListener("keyup", function(event) {
-        event.preventDefault();
-        if (event.keyCode === 13) {
-
-            location.href = "https://google.com";
-        }
-    });
-</script>
-<?php
-
-?>
