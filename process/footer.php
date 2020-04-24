@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/custom.css">
     <link rel="stylesheet" href="css/footer.css">
 </head>
@@ -11,7 +10,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-sm-3">
-                        <h2 class="logo"><a href="#"> LOGO </a></h2>
+                        <h2 class="logo"><a href="#"> Computer Store </a></h2>
                     </div>
                     <div class="col-sm-2">
                         <h5>Get started</h5>
@@ -39,11 +38,19 @@
                     </div>
                     <div class="col-sm-3">
                         <div class="social-networks">
-                            <a href="#" class="twitter"><i class="fa fa-twitter"></i></a>
-                            <a href="#" class="facebook"><i class="fa fa-facebook"></i></a>
-                            <a href="#" class="google"><i class="fa fa-google-plus"></i></a>
+                            <a href="https://www.linkedin.com/in/mhasan502" target="_blank">
+                                <i class="fa fa-linkedin"></i>
+                            </a>
+                            <a href="https://www.facebook.com/Mhasan502" target="_blank">
+                                <i class="fa fa-facebook"></i>
+                            </a>
+                            <a href="https://github.com/mhasan502" target="_blank">
+                                <i class="fa fa-github"></i>
+                            </a>
                         </div>
-                        <button type="button" class="btn btn-default">Contact us</button>
+                        <a type="button" class="btn btn-default" href="contact us.php">
+                            Contact us
+                        </a>
                     </div>
                 </div>
             </div>

@@ -128,6 +128,7 @@ strong {
 
 #searchbar {
     margin-left: 20px;
+    margin-top: 0px;
     color: #FFFFFF;
 
 }
@@ -149,7 +150,7 @@ strong {
 
 .input {
     align-items: center;
-    border: 1px solid transparent;
+    border: 2px solid transparent;
     border-radius: 4px;
     box-shadow: none;
     display: inline-flex;
@@ -162,6 +163,10 @@ strong {
     vertical-align: top;
 }
 
+* {
+    margin: 0;
+    padding: 0
+}
 
 .button {
     background-color: #fff;
@@ -681,4 +686,37 @@ strong {
 
 .navbar-link:not(.is-arrowless) {
     padding-right: 2.5em;
+}
+
+@font-face {
+    font-family: FontAwesome;
+    src: url(https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/fonts/fontawesome-webfont.eot?v=4.7.0);
+    src: url(https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/fonts/fontawesome-webfont.eot?#iefix&v=4.7.0) format('embedded-opentype'), url(https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/fonts/fontawesome-webfont.woff2?v=4.7.0) format('woff2'), url(https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/fonts/fontawesome-webfont.woff?v=4.7.0) format('woff'), url(https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/fonts/fontawesome-webfont.ttf?v=4.7.0) format('truetype'), url(https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/fonts/fontawesome-webfont.svg?v=4.7.0#fontawesomeregular) format('svg');
+    font-weight: 400;
+    font-style: normal
+}
+
+.fa {
+    display: inline-block;
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: inherit;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale
+}
+
+.fa-shopping-cart:before {
+    content: "\f23d"
+}
+
+.fa-linkedin:before {
+    content: "\f0e1"
+}
+
+.fa-facebook:before {
+    content: "\f09a"
+}
+
+.fa-github:before {
+    content: "\f09b"
 }
