@@ -27,9 +27,10 @@ require_once 'connect.php';
                         </div>
                         <div class='cart-btn'>
                             <span>
-                            <!--type='button' onclick='cart.add('$id', '1');'-->
-                            <i class='fa fa-shopping-cart'></i> 
-                            <span>Buy Now</span>
+                                <a href='process/cart_process.php?$id=true' methods='get'>
+                                    <i class='fa fa-shopping-cart'></i> 
+                                    <span>Buy Now</span>
+                                </a>
                             </span>
                         </div>
                     </div>

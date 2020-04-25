@@ -73,7 +73,15 @@
 
         <div class="navbar-end">
             <div class="navbar-item">
-                <div class="buttons">
+                <div id="logout" class="buttons">
+                    <a class="button is-link" href="#">
+                        <strong>  Cart  </strong>
+                    </a>
+                    <a class="button is-light" href="#">
+                        <strong>Log out</strong>
+                    </a>
+                </div>
+                <div id="lonreg" class="buttons">
                     <a class="button is-link" href="register.php">
                         <strong>Sign up</strong>
                     </a>

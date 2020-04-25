@@ -359,7 +359,7 @@ strong {
 }
 
 .buttons:not(:last-child) {
-    margin-bottom: 1rem
+    margin-bottom: -.5rem
 }
 
 @-webkit-keyframes moveIndeterminate {
@@ -719,4 +719,7 @@ strong {
 
 .fa-github:before {
     content: "\f09b"
+}
+#logout {
+    display: none;
 }
