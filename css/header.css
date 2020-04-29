@@ -105,7 +105,7 @@ a strong {
 }
 
 #head a:hover {
-    color: #363636
+    transform: scale(1.05)
 }
 
 #head hr {
@@ -524,6 +524,14 @@ strong {
     position: relative
 }
 
+#abcon .navbar-item, .navbar-link {
+    color: #FFFFFF;
+    display: block;
+    line-height: 1.5;
+    padding: 0.2rem 1rem 0.2rem 0.75rem;
+    position: relative
+}
+
 .navbar-link, a.navbar-item {
     cursor: pointer
 }
@@ -648,8 +656,8 @@ strong {
     }
 
     .navbar-dropdown a.navbar-item:focus, .navbar-dropdown a.navbar-item:hover {
-        background-color: #f5f5f5;
-        color: #0a0a0a
+        background-color: #3273DC;
+        color: #FFFFFF;
     }
 
     .navbar-divider {
@@ -719,7 +727,4 @@ strong {
 
 .fa-github:before {
     content: "\f09b"
-}
-#logout {
-    display: none;
 }

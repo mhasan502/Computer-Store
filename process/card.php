@@ -4,7 +4,7 @@ require_once 'connect.php';
     while($row = mysqli_fetch_array($result)){
         $pname = $row['name'];
         $price = $row['price'];
-        $imagepath = $row['imagepath'];
+        $imagepath = 'https://www.startech.com.bd/image/cache/catalog/'.$row['imagepath'].'228x228.jpg';
         $id = $row['product_id'];
         echo "
         <div class='col-xs-12 col-md-2 product-layout grid'>

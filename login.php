@@ -5,7 +5,7 @@
 </head>
 
 <body>
-<?php require_once("process/header.php"); ?>
+<?php require("process/header.php"); ?>
 <div class="logreg">
     <div class="form">
         <form action="./process/login_process.php" method="post">

@@ -4,7 +4,7 @@
     <title></title>
 </head>
 
-<?php require_once("process/header.php");?>
+<?php require("process/header.php");?>
 <body>
     <div id="content" class="col-xs-8 col-md-12 product-listing">
         <?php require_once("process/card.php"); ?>

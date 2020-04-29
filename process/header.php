@@ -1,3 +1,7 @@
+<?php
+session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -54,12 +58,12 @@
                     ?>
                 </div>
             </div>
-            <div class="navbar-item is-hoverable">
+            <div id="abcon" class="navbar-item is-hoverable">
                 <a class="navbar-item" href="about us.php">
                     About Us
                 </a>
                 <a class="navbar-item" href="contact us.php">
-                    Contact US
+                    Contact Us
                 </a>
                 <div id="searchbar" class="field">
                     <div class="control">
@@ -73,14 +77,25 @@
 
         <div class="navbar-end">
             <div class="navbar-item">
+
+            <?php
+            if (isset($_SESSION['username'])) {
+                echo '
                 <div id="logout" class="buttons">
                     <a class="button is-link" href="#">
-                        <strong>  Cart  </strong>
+                        <strong>
+                            <i class=\'fa fa-shopping-cart\'></i> &nbsp
+                          Cart  
+                         </strong>
                     </a>
-                    <a class="button is-light" href="#">
-                        <strong>Log out</strong>
+                    <a class="button is-light" href="process/logout_process.php">
+                        Log out
                     </a>
                 </div>
+                ';
+            }
+            else {
+                echo '
                 <div id="lonreg" class="buttons">
                     <a class="button is-link" href="register.php">
                         <strong>Sign up</strong>
@@ -89,6 +104,9 @@
                         Log in
                     </a>
                 </div>
+                ';
+            }
+            ?>
             </div>
         </div>
     </div>

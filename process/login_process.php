@@ -1,5 +1,4 @@
 <?php
-session_start();
 require_once 'connect.php';
 
 if(isset($_POST['username']) && isset($_POST['password'])) {
@@ -12,8 +11,8 @@ if(isset($_POST['username']) && isset($_POST['password'])) {
     $count = mysqli_num_rows($result);
 
     if ($count == 1) {
-        session_regenerate_id();
-        $_SESSION['name'] = $username;
+        session_start();
+        $_SESSION['username'] = $username;
         header("Location: ../index.php");
     } else {
         echo "Your Username or Password is invalid";
