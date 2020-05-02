@@ -67,18 +67,6 @@
     text-decoration: none;
 }
 
-#myFooter .facebook:hover {
-    color: #0077e2;
-}
-
-#myFooter .google:hover {
-    color: #ef1a1a;
-}
-
-#myFooter .twitter:hover {
-    color: #00aced;
-}
-
 #myFooter .btn {
     color: white;
     background-color: #d84b6b;

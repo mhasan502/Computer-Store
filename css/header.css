@@ -128,11 +128,11 @@ strong {
 
 #searchbar {
     margin-left: 20px;
-    margin-top: 0px;
+    margin-top: 0;
     color: #FFFFFF;
 
 }
-.is-info.input, .is-info.textarea {
+.is-info.input {
     border-color: #3298dc;
 }
 .input {
@@ -141,7 +141,7 @@ strong {
     width: 100%;
 }
 
-.input, .textarea, .select select {
+.input, .select select {
     background-color: white;
     border-color: #dbdbdb;
     border-radius: 5px;
@@ -658,10 +658,6 @@ strong {
     .navbar-dropdown a.navbar-item:focus, .navbar-dropdown a.navbar-item:hover {
         background-color: #3273DC;
         color: #FFFFFF;
-    }
-
-    .navbar-divider {
-        display: block
     }
 
     .navbar-item.has-dropdown:focus .navbar-link, .navbar-item.has-dropdown:hover .navbar-link {

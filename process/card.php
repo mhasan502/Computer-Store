@@ -5,12 +5,12 @@ require_once 'connect.php';
         $pname = $row['name'];
         $price = $row['price'];
         $imagepath = $row['imagepath'].'500x500.jpg';
-        $id = $row['product_id'];
+        $id = "product.php?pid=".$row['product_id'];
         echo "
         <div class='col-xs-12 col-md-2 product-layout grid'>
             <div class='product-thumb'>
                 <div class='img-holder'>
-                    <a href='#'>
+                    <a href=$id>
                         <img src='$imagepath'>
                     </a>
                 </div>
@@ -18,7 +18,7 @@ require_once 'connect.php';
                 
                     <div class='product-content-blcok'>
                         <h4 class='product-name'>
-                            <a href='#'>$pname</a>
+                            <a href=$id>$pname</a>
                         </h4>
                     </div>
                     <div class='actions'>
