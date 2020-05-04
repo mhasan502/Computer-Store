@@ -359,7 +359,7 @@ ins {
     border-bottom: 1px solid #e1e1e1
 }
 
-.data-table .name {
+.data-table .NAME {
     padding: 0 30px;
     width: 25%;
     background: #eee;
@@ -370,7 +370,7 @@ ins {
     font-weight: 600
 }
 
-.data-table .value {
+.data-table .VALUE {
     padding: 0 30px;
     width: 75%;
     background: #fff;

@@ -1,11 +1,15 @@
 <?php
+require_once 'process/connect.php';
 if (!isset($_GET['pid'])) {
     exit("Error, Incomplete URL");
 }
 else{
-
+    $prod_select = "SELECT * FROM product p JOIN category c ON p.category_id=c.category_id WHERE product_id=".$_GET['pid'];
+    $prod_select_result = mysqli_query($conn, $prod_select);
+    $detail = mysqli_fetch_array($prod_select_result);
+    $imagepath = $detail['imagepath'].'500x500.jpg';
 }
-
+$id = "process/cart_process.php?add=".$_GET['pid'];
 require("process/header.php");
 ?>
 
@@ -13,19 +17,21 @@ require("process/header.php");
     <div class="container">
         <div class="col-md-6">
             <div class="main-image">
-                <img src="img/3700x-500x500.jpg">
+                <img src=<?php echo $imagepath ?>>
             </div>
         </div>
         <div>
             <div class="col-md-6">
                 <div id="product" class="cart-option">
                     <h1>
-                        Asus PRIME H310MK R2.0 8th Gen mATX Motherboard
+                        <?php echo $detail['name'] ?>
                     </h1>
                     <div class="price-wrap">
-                        <ins>6700</ins>
+                        <ins><?php echo $detail['price'] ?></ins>
                     </div>
-                    <button id="button-cart" class="btn submit-btn">Add to cart</button>
+                    <a href=<?php echo $id ?> methods='get' onclick='confirm("Clicked item will be added on your cart!");'>
+                        <button id="button-cart" class="btn submit-btn">Add to cart</button>
+                    </a>
                 </div>
             </div>
         </div>
@@ -41,54 +47,51 @@ require("process/header.php");
                         </thead>
                         <tbody>
                         <tr>
-                            <td class="name">Name</td>
-                            <td class="value">Intel® Socket 1151 for 8th Generation Core™ i7/Core™ i5/Core™
-                                i3/Pentium®/Celeron® Processors
+                            <td class="NAME">NAME</td>
+                            <td class="VALUE">
+                                <?php echo $detail['name'] ?>
                             </td>
                         </tr>
                         <tr>
-                            <td class="name">Company</td>
-                            <td class="value">Intel H310</td>
+                            <td class="NAME">COMPANY</td>
+                            <td class="VALUE"><?php echo $detail['company'] ?></td>
                         </tr>
                         <tr>
-                            <td class="name">Stock Status</td>
-                            <td class="value">128 Mb Flash ROM, UEFI AMI BIOS, PnP, SM BIOS 3.1, ACPI 6.1,
-                                MultilanguageBIOS, ASUS EZ Flash 3, CrashFree BIOS 3, F6 Qfan Control, F3
-                                MyFavorites,
-                                Last Modified log, F12 PrintScreen, and ASUS DRAM SPD (SerialPresence Detect) memory
-                                information
+                            <td class="NAME">STOCK STATUS</td>
+                            <td class="VALUE"> <?php if($detail['stock_status']==1) echo "Available"; else echo "Not Available"; ?>
                             </td>
                         </tr>
                         <tr>
-                            <td class="name">Price</td>
-                            <td class="value">mATX Form Factor <br>
-                                8.9 inch x 7.3 inch ( 22.6 cm x 18.5 cm )
+                            <td class="NAME">PRICE</td>
+                            <td class="VALUE"><?php echo $detail['price'] ?>
                             </td>
                         </tr>
                         </tbody>
                         <thead>
                         <tr>
-                            <td class="heading-row" colspan="3">Memory</td>
+                            <td class="heading-row" colspan="3">Main Information</td>
                         </tr>
                         </thead>
                         <tbody>
-                        <tr>
-                            <td class="name">Type</td>
-                            <td class="value">DDR4</td>
-                        </tr>
-                        <tr>
-                            <td class="name">Slots</td>
-                            <td class="value">2 x DIMM</td>
-                        </tr>
-                        <tr>
-                            <td class="name">Supported Memory</td>
-                            <td class="value">Supports Intel® Extreme Memory Profile (XMP)
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="name">Maximum Mamory</td>
-                            <td class="value">32GB</td>
-                        </tr>
+
+                        <?php
+                            $dsc_q = "SELECT column_name FROM   information_schema.columns WHERE  
+                                    table_schema = 'computer-store' AND table_name = '".$detail['category_name']."'";
+                            $describe = mysqli_query($conn, $dsc_q);
+                            $char_q = "SELECT * FROM ".$detail['category_name']." WHERE product_id=".$_GET['pid'];
+                            $char = mysqli_query($conn, $char_q);
+                            $char_inf=mysqli_fetch_array($char);
+                            $i=0;
+                            while($d_inf=mysqli_fetch_array($describe)){
+                                echo strtoupper("
+                                      <tr>
+                                          <td class='name'> $d_inf[0] </td>
+                                          <td class='value'>$char_inf[$i]</td>
+                                      </tr>");
+                                $i+=1;
+                            }
+                        ?>
+
                         </tbody>
                         <thead>
                         <tr>
@@ -97,8 +100,8 @@ require("process/header.php");
                         </thead>
                         <tbody>
                         <tr>
-                            <td class="name">Manufacturing Warranty</td>
-                            <td class="value">03 Years</td>
+                            <td class="NAME">Warranty</td>
+                            <td class="VALUE"><?php echo $detail['warranty']." Years"?></td>
                         </tr>
                         </tbody>
                     </table>

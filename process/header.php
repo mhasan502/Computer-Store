@@ -33,11 +33,15 @@ session_start();
                     $result = mysqli_query($conn, $category);
                     while($row = mysqli_fetch_array($result)){
                         $cat = $row['category_name'];
+                        $cat_href = 'index.php?cat='.$cat;
                         $cid = $row['category_id'];
                         echo "
-                        <a class='navbar-item' href='index.php?$cat=true'>$cat</a>";
+                        <a class='navbar-item' href=$cat_href>$cat</a>";
                     }
-                    require "browse.php";
+                    if(isset($_GET['cat'])) {
+                        $GLOBALS['query'] = "SELECT * FROM category c JOIN product p ON c.category_id = p.category_id 
+                        WHERE c.category_name='".$_GET['cat']."'";
+                    }
                     ?>
                 </div>
             </div>
@@ -53,8 +57,11 @@ session_start();
                     $result = mysqli_query($conn, $brand);
                     while( $row = mysqli_fetch_array($result)){
                         $brand = $row['company'];
-                        echo "
-                        <a class='navbar-item' href='index.php?$brand=true'>$brand</a>";
+                        $brand_href = 'index.php?brand='.$brand;
+                        echo "<a class='navbar-item' href=$brand_href>$brand</a>";
+                    }
+                    if(isset($_GET['brand'])) {
+                        $GLOBALS['query'] = "SELECT * FROM product WHERE company = '".$_GET['brand']."'";
                     }
                     ?>
                 </div>
@@ -69,7 +76,8 @@ session_start();
                 <div id="searchbar" class="field">
                     <div class="control">
                         <form action="search.php" method="get">
-                            <input id="searchbox" name="searchitem" class="input is-info" type="text" placeholder="Search Here" required>
+                            <input id="searchbox" name="searchitem" class="input is-info" type="text"
+                                   placeholder="Search Here" required>
                         </form>
                     </div>
                 </div>
@@ -81,12 +89,15 @@ session_start();
 
             <?php
             if (isset($_SESSION['username'])) {
+                $item_q = "SELECT sum(quantity) as sum from cart WHERE username = '" . $_SESSION['username'] . "'";
+                $result = mysqli_query($conn, $item_q);
+                $row = mysqli_fetch_array($result);
                 echo '
                 <div id="logout" class="buttons">
                     <a class="button is-link" href="#">
                         <strong>
-                            <i class=\'fa fa-shopping-cart\'></i> &nbsp
-                          Cart  
+                            <i class=\'fa fa-shopping-cart\'></i> Cart -';
+                         echo $row["sum"].'
                          </strong>
                     </a>
                     <a class="button is-light" href="process/logout_process.php">
