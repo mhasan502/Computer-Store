@@ -92,12 +92,13 @@ session_start();
                 $item_q = "SELECT sum(quantity) as sum from cart WHERE username = '" . $_SESSION['username'] . "'";
                 $result = mysqli_query($conn, $item_q);
                 $row = mysqli_fetch_array($result);
-                echo '
-                <div id="logout" class="buttons">
-                    <a class="button is-link" href="#">
+                $cartid = "cart.php?cart=".$_SESSION['username'];
+                echo "
+                <div id='logout' class='buttons'>
+                    <a class='button is-link' href=$cartid>
                         <strong>
-                            <i class=\'fa fa-shopping-cart\'></i> Cart -';
-                         echo $row["sum"].'
+                            <i class='fa fa-shopping-cart'></i> Cart(";
+                         echo $row["sum"].')
                          </strong>
                     </a>
                     <a class="button is-light" href="process/logout_process.php">
