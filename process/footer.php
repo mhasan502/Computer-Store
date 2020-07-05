@@ -4,7 +4,6 @@
     <link rel="stylesheet" href="css/custom.css">
     <link rel="stylesheet" href="css/footer.css">
 </head>
-
     <footer id="myFooter">
         <div id="fixedpos">
             <div class="container">

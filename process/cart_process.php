@@ -2,9 +2,9 @@
 session_start();
 require_once 'connect.php';
 
-if (!isset($_GET['add'])) {
+if (!isset($_GET['add']))
     exit("Error, Incomplete URL");
-}
+
 $id = $_GET['add'];
 $username = $_SESSION['username'];
 $check_cart = "SELECT * FROM cart WHERE username ='".$username."' AND product_id ='".$id."'";
